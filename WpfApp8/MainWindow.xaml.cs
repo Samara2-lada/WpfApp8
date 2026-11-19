@@ -37,10 +37,12 @@ namespace RaceWPF
             ResultBox.Text = "";
             NameBox.Focus();
         }
+        //Кнопка отмена
         private void CancelAdd_Click(object sender, RoutedEventArgs e)
         {
             AddPanel.Visibility = Visibility.Collapsed;
         }
+        //Кнопка Сохранить
         private void SaveNewParticipant_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(NameBox.Text))
@@ -88,10 +90,12 @@ namespace RaceWPF
             var best = participants.OrderBy(p => p.Result).First();
             BestText.Text = $"{best.Result:F2} сек — {best.FullName} (№{best.Number})";
         }
+        //Кнопка Выход
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        //Енопка о программе
         private void AboutBtn_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("3. Заполнить таблицу участников забега на 100 метров на 8 человек с полями: ФИО, \r\n " +
