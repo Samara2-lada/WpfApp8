@@ -26,6 +26,7 @@ namespace RaceWPF
             participants.Add(new Participant("Волков Никита Андреевич", 6, 12.78));
             participants.Add(new Participant("Морозов Егор Дмитриевич", 7, 13.45));
             participants.Add(new Participant("Соколов Максим Игоревич", 8, 12.33));
+            participants.Add(new Participant("Юдаев Александр Николаевич", 9, 11.43));
             UpdateStatistics();
         }
         private void ShowAddPanelBtn_Click(object sender, RoutedEventArgs e)
