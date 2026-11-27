@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Globalization;
-using System.Linq;
 using System.Windows;
 namespace RaceWPF
 {
@@ -25,8 +23,7 @@ namespace RaceWPF
             participants.Add(new Participant("Смирнов Андрей Викторович", 5, 11.54));
             participants.Add(new Participant("Волков Никита Андреевич", 6, 12.78));
             participants.Add(new Participant("Морозов Егор Дмитриевич", 7, 13.45));
-            participants.Add(new Participant("Соколов Максим Игоревич", 8, 12.33));
-            participants.Add(new Participant("Юдаев Александр Николаевич", 9, 11.43));
+            participants.Add(new Participant("Юдаев Александр Николаевич", 8, 11.43));
             UpdateStatistics();
         }
         private void ShowAddPanelBtn_Click(object sender, RoutedEventArgs e)
@@ -67,7 +64,6 @@ namespace RaceWPF
             // Добавление участника
             participants.Add(new Participant(NameBox.Text.Trim(), number, result));
             UpdateStatistics();
-            AddPanel.Visibility = Visibility.Collapsed; // Скрываем панель обратно
         }
         //Очистка поля с даннымми
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
