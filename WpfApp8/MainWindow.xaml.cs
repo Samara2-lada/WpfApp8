@@ -48,20 +48,20 @@ namespace RaceWPF
         {
             if (string.IsNullOrWhiteSpace(NameBox.Text))
             {
-                MessageBox.Show("Введите ФИО участника.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Введите ФИО участника.", "Ошибка");
                 return;
             }
 
             if (!int.TryParse(NumberBox.Text, out int number) || number <= 0)
             {
-                MessageBox.Show("Номер должен быть положительным целым числом.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Номер должен быть положительным целым числом.", "Ошибка");
                 return;
             }
 
             string resultText = ResultBox.Text.Replace(',', '.');
             if (!double.TryParse(resultText, NumberStyles.Float, CultureInfo.InvariantCulture, out double result) || result <= 0)
             {
-                MessageBox.Show("Результат должен быть положительным числом.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Результат должен быть положительным числом.", "Ошибка");
                 return;
             }
             // Добавление участника
